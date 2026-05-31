@@ -7,7 +7,6 @@ export const skillsData = [
   "C++",
   "SQL Server",
   "VS Code",
-  "Linux",
 ];
 
 export const skills = skillsData;
