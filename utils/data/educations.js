@@ -1,20 +1,43 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "Bachelor of Science — Information Technology",
+    duration: "2019 - 2023",
+    institution: "Burapha University",
+    description: "Major in Information Technology · GPA 2.04",
+  },
+];
+
+// Training / Certifications — เพิ่มเป็น section แยกหรือใส่ใน education ก็ได้
+export const trainings = [
+  {
+    id: 1,
+    title: "How to Read Statistics as a PRO",
+    institution: "Big Data Institute (สถาบันข้อมูลขนาดใหญ่)",
+    duration: "April 2026",
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    title: "AI Tools for Tourism: Transforming Customer Experience",
+    institution: "Big Data Institute (สถาบันข้อมูลขนาดใหญ่)",
+    duration: "March 2026",
   },
   {
     id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
-  }
-]
+    title: "UX/UI Design",
+    institution: "Burapha University",
+    duration: "February 2023",
+  },
+  {
+    id: 4,
+    title: "Microsoft Excel Techniques for Efficient Work",
+    institution: "Burapha University",
+    duration: "November 2022",
+  },
+  {
+    id: 5,
+    title: "Python Programming",
+    institution: "Olanlab",
+    duration: "January – February 2022",
+  },
+];
