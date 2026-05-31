@@ -9,3 +9,5 @@ export const skillsData = [
   "VS Code",
   "Linux",
 ];
+
+export const skills = skillsData;
