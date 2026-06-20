@@ -1,11 +1,8 @@
 // @flow strict
-
 import * as React from 'react';
-
 function ProjectCard({ project }) {
-
   return (
-    <div className="from-[#0a1f0e]border-[#1b4a2a] relative rounded-lg border bg-gradient-to-r to-[#0a1f0e] w-full">
+    <div className="from-[#0d3320] border-[#2d7a4a] relative rounded-lg border bg-gradient-to-r to-[#0d3320] w-full">
       <div className="flex flex-row">
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
@@ -20,7 +17,7 @@ function ProjectCard({ project }) {
           {project.name}
         </p>
       </div>
-      <div className="overflow-hidden border-t-[2px] border-green-900 px-4 lg:px-8 py-4 lg:py-8">
+              <div className="overflow-hidden border-t-[2px] border-green-600 px-4 lg:px-8 py-4 lg:py-8">
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
@@ -34,7 +31,6 @@ function ProjectCard({ project }) {
             <span className="text-amber-300">{project.name}</span>
             <span className="text-gray-400">{`',`}</span>
           </div>
-
           <div className="ml-4 lg:ml-8 mr-2">
             <span className=" text-white">tools:</span>
             <span className="text-gray-400">{` ['`}</span>
@@ -67,5 +63,4 @@ function ProjectCard({ project }) {
     </div>
   );
 };
-
 export default ProjectCard;
