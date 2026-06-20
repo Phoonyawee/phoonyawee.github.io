@@ -1,6 +1,5 @@
 // @flow strict
 "use client";
-import Image from "next/image";
 
 const certificates = [
   {
@@ -71,14 +70,10 @@ function Certificate() {
             >
               <div className="rounded-xl overflow-hidden border border-[#2d2d6b] bg-[#0d1224] shadow-lg group-hover:shadow-violet-500/30 group-hover:border-violet-500 transition-all duration-300">
                 <div className="relative w-full h-44 lg:h-52 bg-[#1a1443]">
-                  <Image
+                  <img
                     src={cert.image}
                     alt={cert.title}
-                    fill
-                    className="object-cover"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
+                    className="w-full h-full object-cover"
                   />
                   {/* Placeholder ถ้ายังไม่มีรูป */}
                   <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
