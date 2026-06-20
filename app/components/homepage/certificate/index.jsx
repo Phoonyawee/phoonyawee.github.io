@@ -69,16 +69,12 @@ function Certificate() {
               className="group relative flex-shrink-0 w-64 lg:w-80 cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 hover:z-10"
             >
               <div className="rounded-xl overflow-hidden border border-[#2d2d6b] bg-[#0d1224] shadow-lg group-hover:shadow-violet-500/30 group-hover:border-violet-500 transition-all duration-300">
-                <div className="relative w-full h-44 lg:h-52 bg-[#1a1443]">
+                <div className="w-full h-44 lg:h-52 overflow-hidden">
                   <img
                     src={cert.image}
                     alt={cert.title}
                     className="w-full h-full object-cover"
                   />
-                  {/* Placeholder ถ้ายังไม่มีรูป */}
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
-                    <span className="z-0">📜 {cert.title}</span>
-                  </div>
                 </div>
                 <div className="p-3 lg:p-4">
                   <p className="text-[#16f2b3] font-semibold text-sm lg:text-base line-clamp-2">
