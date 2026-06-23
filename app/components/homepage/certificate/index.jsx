@@ -40,6 +40,9 @@ const certificates = [
 ];
 
 function Certificate() {
+  // duplicate list เพื่อให้ loop ต่อเนื่อง
+  const doubled = [...certificates, ...certificates];
+
   return (
     <div id="certificate" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
@@ -60,20 +63,31 @@ function Certificate() {
         </div>
       </div>
 
-      {/* Scrollable row */}
-      <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-violet-600 scrollbar-track-transparent">
-        <div className="flex gap-6 w-max px-2">
-          {certificates.map((cert) => (
+      {/* Auto-scroll container */}
+      <div className="overflow-hidden relative">
+        {/* fade ซ้าย-ขวา */}
+        <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-[#0a1f0e] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[#0a1f0e] to-transparent z-10 pointer-events-none"></div>
+
+        <div
+          className="flex gap-6 w-max"
+          style={{
+            animation: "scrollLeft 20s linear infinite",
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.animationPlayState = "paused"}
+          onMouseLeave={(e) => e.currentTarget.style.animationPlayState = "running"}
+        >
+          {doubled.map((cert, i) => (
             <div
-              key={cert.id}
-              className="group relative flex-shrink-0 w-64 lg:w-80 cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 hover:z-10"
+              key={i}
+              className="group flex-shrink-0 w-64 lg:w-72 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:z-10"
             >
               <div className="rounded-xl overflow-hidden border border-[#2d2d6b] bg-[#0d1224] shadow-lg group-hover:shadow-violet-500/30 group-hover:border-violet-500 transition-all duration-300">
-                <div className="w-full h-44 lg:h-52 overflow-hidden">
+                <div className="w-full h-44 lg:h-48 overflow-hidden">
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <div className="p-3 lg:p-4">
@@ -88,6 +102,13 @@ function Certificate() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scrollLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </div>
   );
 }
