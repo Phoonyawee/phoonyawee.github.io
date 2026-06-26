@@ -30,13 +30,7 @@ const certificates = [
     issuer: "Burapha University",
     date: "November 2022",
   },
-  {
-    id: 5,
-    title: "Python Programming",
-    image: "/certificate/cert5.png",
-    issuer: "Olanlab",
-    date: "January 2022",
-  },
+
 ];
 
 function Certificate() {
