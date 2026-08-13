@@ -12,26 +12,61 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #0a1f0e;
+  background-color: #060b14;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(0, 180, 120, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 10%, rgba(80, 40, 180, 0.15) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 40% at 50% 80%, rgba(0, 120, 200, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 90% 60%, rgba(160, 40, 200, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 30% at 20% 70%, rgba(0, 200, 160, 0.08) 0%, transparent 50%);
+  background-attachment: fixed;
 }
 
-#sticky-card-1 {
-  --index: 1;
+/* Aurora animated blobs */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(ellipse 55% 35% at 15% 25%, rgba(0, 220, 150, 0.09) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 55% at 75% 15%, rgba(100, 60, 220, 0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 30% at 60% 75%, rgba(0, 140, 220, 0.08) 0%, transparent 65%);
+  animation: auroraShift 18s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
-#sticky-card-2 {
-  --index: 2;
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(ellipse 40% 50% at 85% 40%, rgba(180, 60, 220, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 35% at 25% 65%, rgba(0, 180, 200, 0.07) 0%, transparent 60%);
+  animation: auroraShift2 22s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
-#sticky-card-3 {
-  --index: 3;
+@keyframes auroraShift {
+  0%   { transform: translate(0px, 0px) scale(1); opacity: 1; }
+  33%  { transform: translate(30px, -20px) scale(1.05); opacity: 0.85; }
+  66%  { transform: translate(-20px, 30px) scale(0.97); opacity: 0.95; }
+  100% { transform: translate(15px, -10px) scale(1.03); opacity: 1; }
 }
 
-#sticky-card-4 {
-  --index: 4;
+@keyframes auroraShift2 {
+  0%   { transform: translate(0px, 0px) scale(1); opacity: 0.9; }
+  40%  { transform: translate(-25px, 20px) scale(1.04); opacity: 1; }
+  70%  { transform: translate(20px, -15px) scale(0.98); opacity: 0.85; }
+  100% { transform: translate(-10px, 25px) scale(1.02); opacity: 0.95; }
 }
+
+#sticky-card-1 { --index: 1; }
+#sticky-card-2 { --index: 2; }
+#sticky-card-3 { --index: 3; }
+#sticky-card-4 { --index: 4; }
 
 .sticky-card {
-  // padding-top: calc(var(--index) * 2.5rem);
   top: calc(var(--index) * 4rem);
 }
