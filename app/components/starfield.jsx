@@ -7,6 +7,7 @@ export default function Starfield() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     let animId;
 
     const resize = () => {
@@ -111,5 +112,5 @@ export default function Starfield() {
     };
   }, []);
 
-  return <canvas id="star-canvas" ref={canvasRef} />;
+  return <canvas id="star-canvas" ref={canvasRef} aria-hidden="true" />;
 }
