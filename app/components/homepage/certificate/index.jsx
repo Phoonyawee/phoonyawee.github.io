@@ -1,5 +1,6 @@
 // @flow strict
 "use client";
+import Image from "next/image";
 
 const certificates = [
   {
@@ -78,9 +79,11 @@ function Certificate() {
             >
               <div className="rounded-xl overflow-hidden border border-[#2d2d6b] bg-[#0d1224] shadow-lg group-hover:shadow-violet-500/30 group-hover:border-violet-500 transition-all duration-300">
                 <div className="w-full h-44 lg:h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={cert.image}
                     alt={cert.title}
+                    width={288}
+                    height={192}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>

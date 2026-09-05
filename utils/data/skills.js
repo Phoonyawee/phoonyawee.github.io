@@ -1,12 +1,12 @@
 export const skillsData = [
-  "Java",
+  "C#",
+  "JavaScript",
   "Python",
+  "Java",
   "Next.js",
   "MySQL",
-  "JavaScript",
-  "C++",
-  "SQL Server",
-  "VS Code",
+  "Microsoft Office",
+  "Git",
 ];
 
 export const skills = skillsData;
