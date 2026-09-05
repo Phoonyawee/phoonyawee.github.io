@@ -1,5 +1,7 @@
 // @flow strict
 import * as React from 'react';
+import { FaGithub } from 'react-icons/fa';
+
 function ProjectCard({ project }) {
   return (
     <div className="from-[#0d3320] border-[#2d7a4a] relative rounded-lg border bg-gradient-to-r to-[#0d3320] w-full">
@@ -17,7 +19,13 @@ function ProjectCard({ project }) {
           {project.name}
         </p>
       </div>
-              <div className="overflow-hidden border-t-[2px] border-green-600 px-4 lg:px-8 py-4 lg:py-8">
+      {project.image && (
+        <div className="border-t-[2px] border-green-600 px-4 pt-4 lg:px-8 lg:pt-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="w-full rounded-md" src={project.image} alt={`${project.name} dashboard`} />
+        </div>
+      )}
+      <div className={`${project.image ? '' : 'border-t-[2px] border-green-600'} overflow-hidden px-4 py-4 lg:px-8 lg:py-8`}>
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
@@ -59,6 +67,16 @@ function ProjectCard({ project }) {
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
+        {project.code && (
+          <a
+            href={project.code}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-md bg-[#16f2b3] px-4 py-2 font-semibold text-[#0d3320] transition hover:bg-white"
+          >
+            <FaGithub aria-hidden="true" /> View source
+          </a>
+        )}
       </div>
     </div>
   );
