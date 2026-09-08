@@ -1,6 +1,6 @@
 // @flow strict
 import * as React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 function ProjectCard({ project }) {
   return (
@@ -67,16 +67,28 @@ function ProjectCard({ project }) {
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
-        {project.code && (
-          <a
-            href={project.code}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-5 inline-flex items-center gap-2 rounded-md bg-[#16f2b3] px-4 py-2 font-semibold text-[#0d3320] transition hover:bg-white"
-          >
-            <FaGithub aria-hidden="true" /> View source
-          </a>
-        )}
+        <div className="mt-5 flex flex-wrap gap-3">
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-md bg-[#16f2b3] px-4 py-2 font-semibold text-[#0d3320] transition hover:bg-white"
+            >
+              <FaExternalLinkAlt aria-hidden="true" /> Live Demo
+            </a>
+          )}
+          {project.code && (
+            <a
+              href={project.code}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-md border border-[#16f2b3] px-4 py-2 font-semibold text-[#16f2b3] transition hover:bg-[#16f2b3] hover:text-[#0d3320]"
+            >
+              <FaGithub aria-hidden="true" /> View source
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

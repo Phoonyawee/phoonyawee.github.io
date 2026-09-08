@@ -7,7 +7,7 @@ export const projectsData = [
     tools: ["ASP.NET Core", "C#", "EF Core", "SQLite"],
     role: "Full Stack Developer",
     code: "https://github.com/Phoonyawee/it-service-desk-erp-portal",
-    demo: "",
+    demo: "https://it-service-desk-erp-portal.onrender.com/",
     image:
       "https://raw.githubusercontent.com/Phoonyawee/it-service-desk-erp-portal/main/docs/screenshots/dashboard.png",
   },
