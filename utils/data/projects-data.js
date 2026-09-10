@@ -13,6 +13,18 @@ export const projectsData = [
   },
   {
     id: 2,
+    name: "StockPilot",
+    description:
+      "A role-based inventory and purchase requisition system with stock movements, approval workflow, automatic receiving, and an audit trail.",
+    tools: ["ASP.NET Core", "C#", "EF Core", "SQLite"],
+    role: "Full Stack Developer",
+    code: "https://github.com/Phoonyawee/inventory-purchase-requisition-system",
+    demo: "https://stockpilot-inventory-wm71.onrender.com/",
+    image:
+      "https://raw.githubusercontent.com/Phoonyawee/inventory-purchase-requisition-system/main/docs/screenshots/stockpilot-home.png",
+  },
+  {
+    id: 3,
     name: "Computer Repair Notification System",
     description:
       "A university capstone project — a web-based system for tracking and managing computer repair requests, with automated notifications to keep users informed on repair status.",
