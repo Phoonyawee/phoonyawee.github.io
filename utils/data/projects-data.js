@@ -25,6 +25,18 @@ export const projectsData = [
   },
   {
     id: 3,
+    name: "CareerPilot",
+    description:
+      "A Thai-language job matching and application tracking system that ranks opportunities by technical skills and organizes follow-ups, interviews, and offers.",
+    tools: ["ASP.NET Core", "C#", "EF Core", "SQLite"],
+    role: "Full Stack Developer",
+    code: "https://github.com/Phoonyawee/job-search-application-tracker",
+    demo: "https://job-search-application-tracker.onrender.com/",
+    image:
+      "https://raw.githubusercontent.com/Phoonyawee/job-search-application-tracker/main/docs/screenshots/careerpilot-home.png",
+  },
+  {
+    id: 4,
     name: "Computer Repair Notification System",
     description:
       "A university capstone project — a web-based system for tracking and managing computer repair requests, with automated notifications to keep users informed on repair status.",
