@@ -4,7 +4,7 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 function ProjectCard({ project }) {
   return (
-    <div className="from-[#0d3320] border-[#2d7a4a] relative rounded-lg border bg-gradient-to-r to-[#0d3320] w-full">
+    <div className="from-[#281e57] border-[#6d4aff] relative rounded-lg border bg-gradient-to-r to-[#201435] w-full">
       <div className="flex flex-row">
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
@@ -20,12 +20,12 @@ function ProjectCard({ project }) {
         </p>
       </div>
       {project.image && (
-        <div className="border-t-[2px] border-green-600 px-4 pt-4 lg:px-8 lg:pt-8">
+        <div className="border-t-[2px] border-violet-600 px-4 pt-4 lg:px-8 lg:pt-8">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="w-full rounded-md" src={project.image} alt={`${project.name} dashboard`} />
         </div>
       )}
-      <div className={`${project.image ? '' : 'border-t-[2px] border-green-600'} overflow-hidden px-4 py-4 lg:px-8 lg:py-8`}>
+      <div className={`${project.image ? '' : 'border-t-[2px] border-violet-600'} overflow-hidden px-4 py-4 lg:px-8 lg:py-8`}>
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
