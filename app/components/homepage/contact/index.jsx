@@ -7,7 +7,7 @@ import { MdAlternateEmail } from "react-icons/md";
 export default function ContactSection() {
   return (
     <section id="contact" className="relative my-12 mt-24 text-white lg:my-16">
-      <div className="mx-auto max-w-2xl rounded-lg border border-[#464c6a] p-6 text-center lg:p-10">
+      <div className="mx-auto max-w-2xl rounded-2xl border border-violet-500/50 bg-gradient-to-br from-[#281e57]/80 via-[#111a35] to-[#201435] p-6 text-center shadow-[0_0_40px_rgba(109,74,255,0.15)] backdrop-blur-sm lg:p-10">
         <h2 className="mb-3 text-xl font-medium uppercase text-[#16f2b3]">Contact me</h2>
         <p className="mb-8 text-[#d3d8e8]">
           I am open to IT development and ERP support opportunities.
